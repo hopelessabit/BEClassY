@@ -200,7 +200,7 @@ SIMPLE_JWT = {
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://jade-souffle-c739bd.netlify.app/",
+    "https://jade-souffle-c739bd.netlify.app",
 ]
 CORS_ALLOW_METHODS = [
     "GET",
