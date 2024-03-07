@@ -199,3 +199,10 @@ SIMPLE_JWT = {
 }
 
 CORS_ALLOWED_ALL_ORIGINS = True
+CORS_ALLOW_METHODS = [
+    "GET",
+    "POST",
+    "PUT",
+    "DELETE",
+]
+CORS_ALLOW_HEADERS = ['*']
