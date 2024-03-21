@@ -97,6 +97,14 @@ class RegisterAdminSerializer(serializers.ModelSerializer):
 class ResetPasswordEmailRequestSerializer(serializers.Serializer):
     email = serializers.EmailField(min_length=5)
 
+class PaymentEmailRequestSerializer(serializers.Serializer):
+    email = serializers.EmailField(min_length=5)
+    quantity = serializers.IntegerField(min_value=1)
+    
+class SendCompletionEmailSerializer(serializers.Serializer):
+    email = serializers.EmailField(min_length=5)
+    
+
     class Meta:
         fields = ['email']
 

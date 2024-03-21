@@ -115,7 +115,7 @@ class StudentAPI(viewsets.ModelViewSet):
 class StudentUserAPI(viewsets.ModelViewSet):
     serializer_class = StudentUserLISTSerializer
     parser_classes = [parsers.MultiPartParser,parsers.FormParser,parsers.FileUploadParser]
-    permissions_classes= [permissions.IsAdminUser,]
+    permissions_classes= [permissions.AllowAny,]
     filter_backends = [filters.SearchFilter,filters.OrderingFilter]
     search_fields = ['first_name','last_name','SRN']
     ordering_fields = ['id','first_name','SRN']
@@ -235,7 +235,7 @@ class TeacherAPI(viewsets.ModelViewSet):
 class TeacherUserAPI(viewsets.ModelViewSet):
     serializer_class = TeacherUserLISTSerializer
     parser_classes = [parsers.MultiPartParser,parsers.FormParser,parsers.FileUploadParser]
-    permissions_classes= [permissions.IsAdminUser,]
+    permissions_classes= [permissions.AllowAny]
     filter_backends = [filters.SearchFilter,filters.OrderingFilter]
     search_fields = ['first_name','last_name','email','TRN']
     ordering_fields = ['id','first_name','TRN']
